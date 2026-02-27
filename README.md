@@ -83,7 +83,19 @@ uv pip install torch transformers datasets trl peft accelerate evaluate scikit-l
 uv pip install bitsandbytes deepspeed
 ```
 
-### 2.2 accelerate 配置
+### 2.2 HF Token（安全方式）
+
+不要在代码里写死 token。使用环境变量：
+
+```bash
+cd /media/a100/data/WQ/private/llm_playground
+cp .env.example .env
+# 编辑 .env，把 HF_TOKEN 改成你自己的 read token
+```
+
+训练时，`scripts/train.sh` 会自动加载 `.env` 并检查 `HF_TOKEN`。
+
+### 2.3 accelerate 配置
 
 ```bash
 accelerate config

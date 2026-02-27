@@ -1,7 +1,7 @@
 # Custom
-mongo-data/
-qdrant_storage/
-
+/data
+/cmd_logs
+/outputs
 
 # Unsloth files
 unsloth_compiled_cache/
